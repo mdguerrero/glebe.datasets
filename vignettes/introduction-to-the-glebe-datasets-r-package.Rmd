@@ -33,7 +33,7 @@ klippy::klippy(position = c("top", "right"))
 
 ## Introduction
 
-Blah blah blah
+This package contains tools to create demo datasets for instructional use (e.g., in undergraduate statistics classes).
 
 ## Installation
 ### Source package
@@ -42,7 +42,7 @@ Users can download and install the source package by calling the `install.packag
 
 ```{r warning = FALSE, message = FALSE, eval = FALSE}
 utils::install.packages(
-  pkgs = "https://github.com/barnzilla/r-package-sources/raw/master/glebe.datasets_0.1.tar.gz",
+  pkgs = "https://github.com/barnzilla/r-package-sources/raw/master/glebe.datasets_0.2.tar.gz",
   repos = NULL, 
   type = "source"
 )
@@ -69,3 +69,18 @@ browseVignettes("glebe.datasets")
 ```
 
 ## Getting started
+### Create a demo dataset
+
+Users can createa a demo dataset by calling the `get_dataset()` function. This function takes one argument, `n`, which represents the number of participants (rows) that will be in the dataset.
+
+```{r}
+data <- get_dataset(n = 500)
+```
+
+### Examine the structure of the dataset
+
+The structure of the dataset can be examined by calling the `str()` function that comes pre-installed with R.
+
+```{r}
+str(data)
+```

@@ -15,8 +15,8 @@ Authors@R:
 Author: Joel Barnes <j@barnzilla.ca> [aut, cre], Michelle
     Guerrero <mguerrero@cheo.on.ca> [aut]
 Maintainer: Joel Barnes <j@barnzilla.ca>
-Description: This package contains tools to create complex
-    demo datasets for instructional use (e.g., in undergraduate statistics
+Description: This package contains tools to create demo
+    datasets for instructional use (e.g., in undergraduate statistics
     classes).
 License: GPL-3
 URL: https://github.com/barnzilla/glebe
