@@ -14,11 +14,16 @@
 #'
 #' @return Returns none.
 export_dataset <- function(x, path = paste0(getwd(), "/", deparse(substitute(x))), type = "xlsx") {
-  path <- gsub(".xlsx|.sav", path)
   if(type == "spss") {
-    write_sav(x, paste0(path, ".sav"))
+    if(! grepl(".sav", path)) {
+      path <- paste0(path, ".sav")
+    } 
+    write_sav(x, path)
   } else {
-    write_xlsx(x, paste0(path, ".xlsx"))
+    if(! grepl(".xlsx", path)) {
+      path <- paste0(path, ".xlsx")
+    } 
+    write_xlsx(x, path)
   }
 }
 
