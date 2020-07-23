@@ -10,7 +10,7 @@
 #'
 #'
 #' @return Returns a numeric element between -0.70 and 0.70.
-get_correlation_coefficent <- function(size, direction = "p", seed_number = 1) {
+get_correlation_coefficient <- function(size, direction = "p", seed_number = 1) {
   set.seed(seed_number)
   if(size == "w") {
     output <- sample(0:10, 1) * .01
