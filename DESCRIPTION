@@ -1,6 +1,6 @@
 Package: glebe.datasets
 Title: Create demo datasets for instructional use
-Version: 0.3
+Version: 0.4
 Authors@R: 
     c(person(given = "Joel",
              family = "Barnes",
