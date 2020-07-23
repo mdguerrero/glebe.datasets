@@ -1,3 +1,27 @@
+#' Export a dataset.
+#'
+#' This function allows users to export a dataset to Excel or SPSS.
+#'
+#' @export
+#'
+#' @importFrom haven write_sav
+#' @importFrom writexl write_xlsx
+#'
+#' @param x A data frame.
+#' @param path The path to the location on the user's local computer where the data frame should be stored. This parameter is set to the working directory #' by default.
+#' @param type A character element representing the type of export to perform (options: "xlsx" or "spss"). This parameter is set to "xlsx" by default.
+#'
+#'
+#' @return Returns none.
+export_dataset <- function(x, path = paste0(getwd(), "/", deparse(substitute(x))), type = "xlsx") {
+  path <- gsub(".xlsx|.sav", path)
+  if(type == "spss") {
+    write_sav(x, paste0(path, ".sav"))
+  } else {
+    write_xlsx(x, paste0(path, ".xlsx"))
+  }
+}
+
 #' Randomly create a correlation coefficient.
 #'
 #' This function randomly creates a correlation coefficient.
