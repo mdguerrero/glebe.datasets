@@ -42,7 +42,7 @@ Users can download and install the source package by calling the `install.packag
 
 ```{r warning = FALSE, message = FALSE, eval = FALSE}
 utils::install.packages(
-  pkgs = "https://github.com/barnzilla/r-package-sources/raw/master/glebe.datasets_0.2.tar.gz",
+  pkgs = "https://github.com/barnzilla/r-package-sources/raw/master/glebe.datasets_0.4.tar.gz",
   repos = NULL, 
   type = "source"
 )
@@ -74,7 +74,7 @@ browseVignettes("glebe.datasets")
 Users can createa a demo dataset by calling the `get_dataset()` function. This function takes one argument, `n`, which represents the number of participants (rows) that will be in the dataset.
 
 ```{r}
-data <- get_dataset(n = 500)
+demo_dataset <- get_dataset(n = 500)
 ```
 
 ### Examine the structure of the dataset
@@ -82,5 +82,23 @@ data <- get_dataset(n = 500)
 The structure of the dataset can be examined by calling the `str()` function that comes pre-installed with R.
 
 ```{r}
-str(data)
+str(demo_dataset)
+```
+
+### Export the dataset
+
+Users can export a demo dataset to either Excel or SPSS using the `export_dataset()` function.
+
+```{r eval = FALSE}
+export_dataset(
+  demo_dataset, 
+  path = "c:/users/joel/desktop/demo_dataset.xlsx", 
+  type = "spss"
+)
+
+export_dataset(
+  demo_dataset, 
+  path = "c:/users/joel/desktop/demo_dataset.spss", 
+  type = "spss"
+)
 ```
